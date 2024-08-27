@@ -1,0 +1,75 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.projects-title{
+    position: relative;
+}
+.projects-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    font-family: "Bagel Fat One", system-ui;
+    border-bottom: 5px solid black;
+    border-radius: 8px;   
+}
+.projects-title svg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.projects-container img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.projects-container img:hover{
+    transform: scale(1.05);
+}
+.Projects-showmore{
+    position: relative;
+    width: 150px;
+    font-family: "Bagel Fat One", system-ui;
+    padding: 13px 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 2px solid black;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+.Projects-showmore::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,127,80,1) 45%, rgba(190, 126, 240, 0.908) 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+.Projects-showmore:hover{
+    color: white;
+    transform: scale(1.05);
+}
+.Projects-showmore:hover::before{
+    left: 0;
+}

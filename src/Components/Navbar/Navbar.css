@@ -1,0 +1,91 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+.logo{
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 40px;
+    color: rgb(255, 127, 80);
+    font-weight: 700;
+    font-style: normal;
+    cursor: pointer;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-menu li{
+    cursor: pointer;
+}
+.anchor-link{
+    text-decoration: none;
+    color: black;
+}
+.underline{
+    height: 12px;
+    width: 50px;
+    margin-left: 3px;
+}
+.nav-connect {
+    position: relative;
+    padding: 13px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 800;
+    border: 2px solid black;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-connect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,127,80,1) 45%, rgba(190, 126, 240, 0.908) 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+.nav-connect:hover {
+    color: white;
+    transform: scale(1.05);
+}
+.nav-connect:hover::before {
+    left: 0;
+}
+.close-nav{
+    display: none;
+}
+.menu-nav{
+    display: none;
+}
+@media(max-width:1344px){
+    .nav-menu{
+        display: none;
+    }
+    .nav-connect{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 270px;
+        gap: 80px;
+    }
+    .menu-nav{
+        display: block;
+        right: 270px;
+    }
+}

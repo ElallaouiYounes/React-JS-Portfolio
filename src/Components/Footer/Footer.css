@@ -1,0 +1,131 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 500px;
+    padding-bottom: 10px;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-left p{
+    max-width: 500px;
+    font-size: 20px;
+}
+.footer-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.footer-right input{
+    width: 350px;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.subscribe {
+    position: relative;
+    width: fit-content;
+    padding: 13px 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: "Pacifico", cursive;
+    font-weight: 800;
+    border: 2px solid black;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+.subscribe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,127,80,1) 45%, rgba(190, 126, 240, 0.908) 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+.subscribe:hover {
+    color: white;
+    transform: scale(1.05);
+}
+.subscribe:hover::before {
+    left: 0;
+}
+.footer hr{
+    height: 3px;
+    background-color: black;
+    margin: 0px 130px 30px 130px;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 130px 100px 130px;
+}
+.footer-bottom p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.under-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.under-left p{
+    cursor: pointer;
+}
+.email-field:hover{
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.3s ease-in;
+    -webkit-animation: wobble 0.3s ease-in;
+}
+@keyframes wobble {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+}
+
+@-webkit-keyframes wobble {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    25%, 75% {
+        -webkit-transform: translateX(-3px);
+    }
+    50% {
+        -webkit-transform: translateX(3px);
+    }
+}
+.email-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding-left: 20px;
+    border-radius: 30px;
+}

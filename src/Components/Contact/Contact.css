@@ -1,0 +1,204 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.contact-title{
+    position: relative;
+}
+.contact-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    font-family: "Bagel Fat One", system-ui;
+    border-bottom: 5px solid black;
+    border-radius: 8px;   
+}
+.contact-title svg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.contact-section{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 80px;
+}
+.social-links{
+    border: none;
+    height: 40px;
+    width: 40px;
+}
+.social-links:hover{
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.3s ease-in;
+    -webkit-animation: wobble 0.3s ease-in;
+}
+.social-links img{
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+}
+.contact-left h1{
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    font-weight: 900;
+    background: linear-gradient(90deg, rgba(255,127,80,1) 1%, rgba(164, 73, 234, 0.908) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-left .myparagraph{
+    max-width: 600px;
+    font-size: 20px;
+    margin: 30px 0 30px 0;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-detail{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+.contact-detail p{
+    font-size: 18px;
+    font-weight: 800;
+}
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 200px;
+
+}
+.contact-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-item label{
+    font-size: 18px;
+    font-family: "Bagel Fat One", system-ui;
+}
+.contact-item input{
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px 0 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contact-item input:focus{
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.3s ease-in;
+    -webkit-animation: wobble 0.3s ease-in;
+}
+.contact-item textarea{
+    width: 500px;
+    height: 200px;
+    padding: 10px 0px 0px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.contact-item textarea:focus{
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.3s ease-in;
+    -webkit-animation: wobble 0.3s ease-in;
+}
+@keyframes wobble {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+}
+
+@-webkit-keyframes wobble {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    25%, 75% {
+        -webkit-transform: translateX(-3px);
+    }
+    50% {
+        -webkit-transform: translateX(3px);
+    }
+}
+.submit-btn button{
+    position: relative;
+    width: 250px;
+    margin-top: 30px;
+    font-family: "Bagel Fat One", system-ui;
+    padding: 13px 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 2px solid black;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+.submit-btn button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,127,80,1) 45%, rgba(190, 126, 240, 0.908) 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+.submit-btn button:hover{
+    color: white;
+    transform: scale(1.05);
+}
+.submit-btn button:hover::before{
+    left: 0;
+}
+.submittion {
+    color: #270;
+    background-color: #DFF2BF;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 3px 3px 3px 3px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+.error-msg {
+    color: #D8000C;
+    background-color: #FFBABA;
+    padding: 10px;
+    border-radius: 3px 3px 3px 3px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+.error-msg i{
+    padding-top: 2px;
+}
+.submittion i{
+    padding-top: 2px;
+}
